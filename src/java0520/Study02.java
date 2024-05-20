@@ -1,5 +1,10 @@
 package java0520;
 
+/*********************************
+ * >> 반복문 
+ * for : for( ; ; ) {}
+ *********************************/
+
 public class Study02 {
 
 	public static void main(String[] args) {
@@ -53,23 +58,23 @@ public class Study02 {
 		
 		// 문제3) 증가될 단수를 제어 하세요.
 		
-		int step = 2;    // step > 1, 4 
-		for (int 단 = 1; 단 <= 9; 단 += step) { // 3단계식 위한 반복문
-
-			for (int 증가값 = 1; 증가값 <= 9; 증가값++) { // 증가값 위한 반복문 1 ~ 9
-
-				// step > 1, 4, 7
-				// 1 <= 3;   4 <= 3;  7 <= 3;
-				// s >> 1 ,2 ,3 >> 4, 5, 6 >> 7, 8, 9
-				for(int s = 단; s < (단+step); s++) { // s >> step + 1 / step + 2 + 
-					System.out.print(s + " * " + 증가값 + " = " + (s * 증가값) + "\t");
-				}
-				System.out.println();
-				
-			}
-			System.out.println();
-
-		}
+//		int step = 5;    // step > 1, 4 
+//		for (int 단 = 1; 단 <= 9; 단 += step) { // 3단계식 위한 반복문
+//
+//			for (int 증가값 = 1; 증가값 <= 9; 증가값++) { // 증가값 위한 반복문 1 ~ 9
+//
+//				// step > 1, 4, 7
+//				// 1 <= 3;   4 <= 3;  7 <= 3;
+//				// s >> 1 ,2 ,3 >> 4, 5, 6 >> 7, 8, 9
+//				for(int s = 단; s < (단+step); s++) { // s >> step + 1 / step + 2 + 
+//					System.out.print(s + " * " + 증가값 + " = " + (s * 증가값) + "\t");
+//				}
+//				System.out.println();
+//				
+//			}
+//			System.out.println();
+//
+//		}
 
 	}
 
