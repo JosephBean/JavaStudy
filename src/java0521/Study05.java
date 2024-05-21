@@ -14,8 +14,17 @@ public class Study05 {
 		 ************************************************/
 		
 		// 해결 코드 작성 시작
+		String[][] 배열 = new String[3][3];
 		
-		
+		for(int i = 0; i < 배열.length; i++) {
+			
+			for(int j = 0; j < 배열[i].length; j++) {
+				String value = "(" + i + "," + j + ")";
+				System.out.print(value);
+			}
+			System.out.println();
+			
+		}
 		
 		
 	}

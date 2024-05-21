@@ -23,7 +23,14 @@ public class Study08 {
 		};
 		
 		// 해결 코드 작성 시작
-		
+		for(int i = 0; i < 배열.length; i++) {
+			
+			for(int j = 0; j < 배열[i].length; j++) {
+				System.out.printf("%2d   ", 배열[i][j]);
+			}
+			System.out.println();
+			
+		}
 		
 	}
 

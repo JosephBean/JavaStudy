@@ -15,6 +15,31 @@ public class Study07 {
 		 ************************************************/
 		
 		// 해결 코드 작성 시작
+		// 배열 생성
+		int[][] 배열 = new int[4][4];
+		
+		// 배열에 값 넣기
+		int 감소값 = 16;
+		for(int i = 0; i < 배열.length; i++) {
+			
+			for(int j = 0; j < 배열[i].length; j++) {
+				배열[i][j] = 감소값;
+				감소값--;
+			}
+			
+		}
+		
+		
+		// 출력
+		for(int i = 0; i < 배열.length; i++) {
+			
+			for(int j = 0; j < 배열[i].length; j++) {
+				int 값 = 배열[i][j];
+				System.out.print(값 + ",\t");
+			}
+			System.out.println();
+			
+		}
 		
 		
 		
