@@ -36,6 +36,36 @@ public class Study01 {
 //	    	System.out.println(결과);
 //	    }
 	
+	    // 배열에 별 넣기
+	    String[][] 배열 = new String[5][5];
+	    for(int i = 0; i < 배열.length; i++) {
+	    	
+	    	for(int j = 0; j < 배열[i].length; j++) {
+	    		// 빈공간
+	    		배열[i][j] = 별;
+	    	}
+	    	
+	    }
+	    
+	    // 배열에 값 출력
+	    for(int i = 0; i < 배열.length; i++) {
+	    	
+	    	for(int j = 0; j < 배열[i].length; j++) {
+//	    		if(i == 1 && j == 4) {
+//	    			continue;
+//	    		} else if(i == 2 && (j == 4 || j == 3)) {
+//	    			continue;
+//	    		} else if(i == 3 && (j == 4 || j == 3 || j == 2)) {
+//	    			continue;
+//	    		} else if(i == 4 && (j == 4 || j == 3 || j == 2 || j == 1)) {
+//	    			continue;
+//	    		}
+	    		System.out.print(배열[i][j]);
+	    	}
+	    	System.out.println();
+	    	
+	    }
+	    
 	
 	    /*** 코드 종료 ***/
 
