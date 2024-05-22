@@ -39,17 +39,12 @@ public class Study02 {
 	    	}
 	    }
 	    
-	    
-	    
-	    
-	    
 	    for(int i = 0; i < 배열.length; i++) {
 	    	for(int j = 0; j < 배열[i].length; j++) {
 	    		System.out.print(배열[i][j]);
 	    	}
 	    	System.out.println();
 	    }
-	
 	
 	    /*** 코드 종료 ***/
 
