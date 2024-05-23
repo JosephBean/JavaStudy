@@ -16,6 +16,10 @@ public class Study03 {
 		
 		/** 객체 사용 **/
 		
+		while(true) {
+			String key = sc.nextLine();
+			if( "STOP".equals(key) ) break;
+		}
 		
 		
 		/** 객체 제거 **/

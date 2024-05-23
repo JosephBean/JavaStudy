@@ -16,6 +16,10 @@ public class Study02 {
 		
 		/** 객체 사용 **/
 		
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		
+		System.out.println(a + b);
 		
 		
 		/** 객체 제거 **/

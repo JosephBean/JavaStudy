@@ -13,13 +13,19 @@ public class Study01 {
 
 		/** 객체 생성 **/
 		Scanner sc = new Scanner(System.in);
+		//System.out.println(sc);
 		
 		/** 객체 사용 **/
-		
+		int a = sc.nextInt();
+		System.out.println(a);
 		
 		
 		/** 객체 제거 **/
-		sc.close();
+//		sc.close();
+		
+//		int b = sc.nextInt();
+//		System.out.println(b);
+		
 		
 	}
 
