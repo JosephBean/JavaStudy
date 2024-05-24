@@ -24,23 +24,24 @@ public class Study05 {
 			System.out.println("첫번째 숫자를 입력하세요.");
 			int a = sc.nextInt();
 			
-			int b = sc.nextInt();
+			System.out.println("연산 기호를 넣어주세요.");
+			String b = sc.nextLine();
 			
 			System.out.println("두번째 숫자를 입력하세요.");
 			int c = sc.nextInt();
 			
 			String d = "";
 			switch (b) {
-				case 1:
+				case "+":
 					d = a + 더하기 + c + "=" + (a + c);
 					break;
-				case 2:
+				case "-":
 					d = a + 빼기 + c + "=" + (a - c);
 					break;
-				case 3:
+				case "/":
 					d = a + 나누기 + c + "=" + (a / c);
 					break;
-				case 4:
+				case "*":
 					d = a + 곱하기 + c + "=" + (a * c);
 					break;
 				default:
