@@ -3,6 +3,7 @@ package java0527;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Study01_1 {
@@ -28,6 +29,18 @@ public class Study01_1 {
 			ps = conn.prepareStatement(sql2);
 			int result = ps.executeUpdate();
 			System.out.println(result);
+			
+			// sql = select문 실행해서 위의 insert된 데이터를 출력 하시오!
+			String sql3 = "select * from test";
+			
+			ps = conn.prepareStatement(sql3);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				int no = rs.getInt("no");
+				String name = rs.getString("name");
+				System.out.println(no + ", " + name);
+			}
 			
 			conn.close();
 		} catch (ClassNotFoundException e) {
