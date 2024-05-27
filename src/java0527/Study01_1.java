@@ -39,8 +39,56 @@ public class Study01_1 {
 			while(rs.next()) {
 				int no = rs.getInt("no");
 				String name = rs.getString("name");
-				System.out.println(no + ", " + name);
+				TestDTO testDto = new TestDTO();
+				testDto.setNo(no);
+				testDto.setName(name);
+				System.out.println(testDto);
+//				System.out.println(no + ", " + name);
 			}
+			
+			// 수정
+			String sql4 = "update test set name = '안녕'";
+			ps = conn.prepareStatement(sql4);
+			result = ps.executeUpdate();
+			System.out.println(result);
+			
+			// 데이터 확인
+			ps = conn.prepareStatement(sql3);
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				int no = rs.getInt("no");
+				String name = rs.getString("name");
+				TestDTO testDto = new TestDTO();
+				testDto.setNo(no);
+				testDto.setName(name);
+				System.out.println(testDto);
+//				System.out.println(no + ", " + name);
+			}
+			// 데이터 확인
+			
+			// 삭제
+			String sql5 = "delete from test";
+			ps = conn.prepareStatement(sql5);
+			result = ps.executeUpdate();
+			System.out.println(result);
+			
+			// 데이터 확인
+			ps = conn.prepareStatement(sql3);
+			rs = ps.executeQuery();
+			int cnt = 0;
+			while(rs.next()) {
+				int no = rs.getInt("no");
+				String name = rs.getString("name");
+				TestDTO testDto = new TestDTO();
+				testDto.setNo(no);
+				testDto.setName(name);
+				System.out.println(testDto);
+				cnt++;
+//							System.out.println(no + ", " + name);
+			}
+			System.out.println("행수 : " + cnt);
+			// 데이터 확인
 			
 			conn.close();
 		} catch (ClassNotFoundException e) {
