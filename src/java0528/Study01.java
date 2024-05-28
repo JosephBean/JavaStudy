@@ -1,5 +1,8 @@
 package java0528;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Study01 {
 
 	public static void main(String[] args) {
@@ -9,8 +12,6 @@ public class Study01 {
 		String 사용자 = "root";
 		String 비밀번호 = "1234";
 		new DbController(드라이버, 주소, 사용자, 비밀번호);
-		
-		
 		
 	}
 
