@@ -43,18 +43,50 @@ public class DbController {
 		sql += " 해적단 	varchar(50),";
 		sql += " 역활		varchar(50)";
 		sql += " )";
-		테이블생성(sql, conn);
+		if(테이블생성(sql, conn)) {
+			// DML >> CRUD
+			// 1단계 데이터 넣기 (insert)
+			데이터생성();
+		} else {
+			System.out.println("테이블 생성 실패!!");
+		}
 	}
 	
-	private void 테이블생성(String sql, Connection conn) {
+	private void 데이터생성() {
+		DataDto data = new DataDto();
+		data.set번호(1);
+		data.set이름("몽키 D 루피");
+		data.set성별("남자");
+		data.set특징("고무고무 열매");
+		data.set해적단("밀짚모자");
+		data.set역활("선장");
+		
+		String sql = "insert into 명단 value (";
+		
+		sql += data.get번호();
+		sql += ",'" + data.get이름() + "'";
+		sql += ",'" + data.get성별() + "'";
+		sql += ",'" + data.get특징() + "'";
+		sql += ",'" + data.get해적단() + "'";
+		sql += ",'" + data.get역활() + "'";
+		
+		sql += ")";
+		
+		System.out.println(sql);
+		
+	}
+	
+	private boolean 테이블생성(String sql, Connection conn) {
 		System.out.println(sql);
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.execute();
 			ps.close();
+			return true;  // << 성공
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return false;  // << 실패
 	}
 	
 	private void 데이터읽기(String sql, Connection conn) {
