@@ -3,7 +3,10 @@ package java0528;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import java0527.TestDTO;
 
 public class DbController {
 	
@@ -44,15 +47,23 @@ public class DbController {
 		sql += " 역활		varchar(50)";
 		sql += " )";
 		if(테이블생성(sql, conn)) {
-			// DML >> CRUD
-			// 1단계 데이터 넣기 (insert)
-			데이터생성();
+			cud기능(데이터생성(), conn); // << 
+			
+			데이터읽기("select * from 명단", conn);
+			
+			sql = "update 명단 set 역활 = '광대' where 번호 = 1";
+			cud기능(sql, conn);
+			데이터읽기("select * from 명단", conn);
+			
+			sql = "delete from 명단 where 번호 = 1";
+			cud기능(sql, conn);
+			데이터읽기("select * from 명단", conn);
 		} else {
 			System.out.println("테이블 생성 실패!!");
 		}
 	}
 	
-	private void 데이터생성() {
+	private String 데이터생성() {
 		DataDto data = new DataDto();
 		data.set번호(1);
 		data.set이름("몽키 D 루피");
@@ -73,7 +84,7 @@ public class DbController {
 		sql += ")";
 		
 		System.out.println(sql);
-		
+		return sql;
 	}
 	
 	private boolean 테이블생성(String sql, Connection conn) {
@@ -90,11 +101,39 @@ public class DbController {
 	}
 	
 	private void 데이터읽기(String sql, Connection conn) {
-		
+		System.out.println(sql);
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				DataDto data = new DataDto();
+				data.set번호(rs.getInt("번호"));
+				data.set이름(rs.getString("이름"));
+				data.set성별(rs.getString("성별"));
+				data.set특징(rs.getString("특징"));
+				data.set해적단(rs.getString("해적단"));
+				data.set역활(rs.getString("역활"));
+				System.out.println(data);
+			}
+			rs.close();
+			ps.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	private void cud기능(String sql, Connection conn) {
-		
+		System.out.println(sql);
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			int result = ps.executeUpdate();
+			System.out.println(result);
+			ps.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
