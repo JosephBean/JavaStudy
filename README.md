@@ -1,18 +1,22 @@
-## Getting Started
+# 자바 소스 코드
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+1. 클래스 알아보기
++ 생성자 : `class`를 객체로 생성하여 만들기 위한 대상
++ 변수 : 해당 자료형의 값을 담기 위하여 만들고 사용하는 대상
++ 상수 : 변수와 동일하지만 `한번 값을 넣고 수정을 할 수 없다는 특징`을 가지고 있습니다.
++ 메소드 : `기능`을 정의 하여 필요한 로직을 구현하는 대상
+* `java` 파일를 컴파일 하기
+```
+javac Study.java
+```
+* `class` 파일를 실행 하기
+```
+java Study
+```
 
-## Folder Structure
+2. 주석 (설명문 넣기)
+```
+1. 한줄 주석 : //
+2. 범위 주석 : /* */
+```
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
