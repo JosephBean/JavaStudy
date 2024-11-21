@@ -29,13 +29,13 @@ java Study
 
 4. 조건문 `if / else if / else`
 + if문
-```
+```java
 if(조건식) {
 
 }
 ```
 + else if문
-```
+```java
 if(조건식) {
 
 } else if(조건식) {
@@ -43,7 +43,7 @@ if(조건식) {
 }
 ```
 + else문
-```
+```java
 if(조건문) {
 
 } else {
@@ -60,7 +60,7 @@ if(조건문) {
 + `<=` 뒤의 값이 앞의 값 보다 큰거나 같은지 알아보는 비교자
 
 5. switch/case문
-```
+```java
 switch(입력변수) {
     case "": [명령 블럭]
     default : [명령 블럭]
@@ -68,8 +68,37 @@ switch(입력변수) {
 ```
 
 6. for문
-```
+```java
 for( ; ; ) {
 
 }
 ```
+---
+## 1일차 문제
++ 아래의 연산의 결과 값은?
+```java
+int a = 10;
+boolean b = false;
+System.out.print( (a + b) );
+```
++ 아래의 조건문에서 어떤 내용이 출력 될까요?
+```java
+String a = "자바";
+String b = new String("자바");
+if(a == b) {
+    System.out.print("참");
+} else {
+    System.out.print("거짓");
+}
+```
++ 아래의 구구단에서 `짝수`의 단만 출력하려면 어떻게 해야할까요?
+```
+for(int 단 = 1; 단 <= 9; 단++) {
+    System.out.println(단 + "단");
+    for(int i = 1; i <= 9; i++) {
+        System.out.print(단 + " * " + i + " = " + (단 * i) + "\t" );
+    }
+    System.out.println();
+}
+```
+---
