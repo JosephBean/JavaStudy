@@ -18,7 +18,6 @@ public class Study11 {
         // 문제2 (2차원 배열에 값 넣기)
         String[][] 문제2 = new String[5][3];
         for(int i = 0; i < 문제2.length; i++) { // 행을 위한 FOR문
-           
             
             for(int j = 0; j < 문제2[i].length; j++) { // 열을 위한 FOR문
                 // if(j == 1) {
