@@ -5,7 +5,17 @@ public class Study12 {
         Study12 클래스 = new Study12();
         // 클래스.배열확인(클래스.문제1값());
         // 클래스.배열확인(클래스.문제2값());
-        클래스.배열확인(클래스.문제3값());
+        // 클래스.배열확인(클래스.문제3값());
+        클래스.배열확인(클래스.문제4값());
+    }
+
+    private void 배열확인(String[][] 배열) {
+        for(int i = 0; i < 배열.length; i++) {
+            for(int j = 0; j < 배열[i].length; j++) {
+                System.out.print(배열[i][j]);
+            }
+            System.out.println();
+        }
     }
 
     private String[][] 문제1값() {
@@ -60,13 +70,18 @@ public class Study12 {
         return 문제3;
     }
 
-    private void 배열확인(String[][] 배열) {
-        for(int i = 0; i < 배열.length; i++) {
-            for(int j = 0; j < 배열[i].length; j++) {
-                System.out.print(배열[i][j]);
+    private String[][] 문제4값() {
+        String[][] 문제4 = new String[10][10];
+        // 행   열      조건식( 열위치값 <= (열의길이 - 1) - 행위치값 )
+        // 0    0~9     0 ~ 9 <= 9 (10 - 1) - 0 
+        // 1    0~8     0 ~ 8 <= 8 (10 - 1) - 1
+        // 2    0~7     0 ~ 7 <= 7 (10 - 1) - 2
+        for(int i = 0; i < 문제4.length; i++) {
+            for(int j = 0; j < 문제4[i].length; j++) {
+                문제4[i][j] = (j <= (문제4[i].length -1) - i) ? o : 빈;
             }
-            System.out.println();
         }
+        return 문제4;
     }
 
 }
