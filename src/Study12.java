@@ -3,10 +3,8 @@ public class Study12 {
     String 빈 = "X";
     public static void main(String[] args) {
         Study12 클래스 = new Study12();
-        // 2차원 배열에 값 넣기
-        String[][] 문제1 = 클래스.문제1값();
-        // 2차원 배열에 있는 값 확인
-        클래스.배열확인(문제1);
+        // 클래스.배열확인(클래스.문제1값());
+        클래스.배열확인(클래스.문제2값());
     }
 
     private String[][] 문제1값() {
@@ -21,6 +19,27 @@ public class Study12 {
             }
         }
         return 문제1;
+    }
+
+    private String[][] 문제2값() {
+        String[][] 문제2 = new String[10][10];
+        for(int i = 0; i < 문제2.length; i++) {
+            for(int j = 0; j < 문제2[i].length; j++) {
+                // if(j < i) {
+                //     문제2[i][j] = 빈;
+                // } else {
+                //     문제2[i][j] = o;
+                // }
+                문제2[i][j] = (j < i) ? 빈 : o;
+                // 행의 인덱스가 0이면 모두 'O'로 채우고
+                // 행의 인덱스가 1부터 열의 인덱스와 비교하여 채워질 칸을 채운다.
+                // 열 < 행 조건식을 사용했을 경우
+                // [1,0]  
+                // [2,0] [2,1]
+                // [3,0] [3,1] [3,2]
+            }
+        }
+        return 문제2;
     }
 
     private void 배열확인(String[][] 배열) {
