@@ -128,4 +128,6 @@ String[][] 변수명 = new String[5][5];
 
 + 2차원 배열로 아래의 그림과 같이 넣으시오. 단, 값을 넣을때 for문 사용
 
-<img src="./images/q/2.png" width="300"></img>
+<img src="./images/q/2.png" width="200"></img>
+---
+
