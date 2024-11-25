@@ -131,3 +131,6 @@ String[][] 변수명 = new String[5][5];
 <img src="./images/q/2.png" width="200"></img>
 ---
 
+## 클래스 
++ 생성자
++ 객체 생성
