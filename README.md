@@ -168,16 +168,21 @@ list.remove(인덱스)
 > - 맵은 동일한 키(key)를 담을 수 있지만 가장 마지막 값을 가진다.
 1. 선언 및 생성
 ```java
+Map map = new HashMap();
 ```
 2. 맵에 값 넣기
 ```java
+map.put(key, value);
 ```
 3. 맵에서 선택적으로 값 가져오기
 ```java
+map.get(key);
 ```
 4. 맵의 크기(사이즈) 가져오기
 ```java
+map.size();
 ```
 5. 맵에서 선택적으로 삭제하기
 ```java
+map.remove(key);
 ```
