@@ -12,6 +12,7 @@ public class Study07 {
 	}
 }
 
+@FunctionalInterface
 interface 슈퍼계산기 {
 	final String title = "print : ";
 	int 계산하기(int a, int b);
